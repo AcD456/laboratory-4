@@ -4,9 +4,11 @@ from aiogram.types import Message
 
 from config import TOKEN
 
+import app.keyboard as kb
+
 router = Router()
 
 
 @router.message(CommandStart()) # type: ignore
 async def cmd_start(message: Message):
-    await message.answer('Привет! Я бот для получения справочной информации о городах.\n Введите название города, чтобы получить данные.')
+    await message.answer('Привет! Я бот для получения справочной информации о городах.', reply_markup = kb.main)
