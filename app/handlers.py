@@ -105,7 +105,7 @@ async def set_language_russian(message: Message):
 @router.message(F.text == "/Russian")
 async def set_language_russian_en(message: Message):
     user_languages[message.from_user.id] = "ru"  # Сохраняем язык пользователя
-    await message.answer("Language changed to Russian.", reply_markup=kb.main_en)
+    await message.answer("Language changed to Russian.", reply_markup=kb.main_ru)
 
 # Обработчик кнопки "/English" для английского языка
 @router.message(F.text == "/English")
